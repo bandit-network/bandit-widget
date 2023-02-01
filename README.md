@@ -7,7 +7,7 @@ This project provides a JavaScript library for rendering widgets on websites. Th
 
 To use the Bandit Widgets, include the following script tag in the HTML code of the web page:
 
-```http
+```
   <script>
     var d = document,
       t = "script",
@@ -16,7 +16,9 @@ To use the Bandit Widgets, include the following script tag in the HTML code of 
     o.src = "https://cdn.jsdelivr.net/gh/bandit-network/bandit-widget@main/static/js/index.js",
       o.addEventListener("load", function() {
         renderFeatured();
-        renderStats()
+        renderStats();
+        renderMenu();
+        renderSubscribe();
       }, !1),
       s.parentNode.insertBefore(o, s);
   </script>
@@ -27,8 +29,13 @@ To use the Bandit Widgets, include the following script tag in the HTML code of 
 
 To render a featured collection, add the following HTML code to the web page, replacing [ACCESS_KEY] with the appropriate value:
 
-```http
+```
   <div data-access-key=[ACCESS_KEY] id="bad-featured"></div>
+```
+
+Please call the below function in above script to render featured collections:
+```
+  renderFeatured()
 ```
 
 
@@ -36,8 +43,37 @@ To render a featured collection, add the following HTML code to the web page, re
 
 To render statistics for a collection, add the following HTML code to the web page, replacing [ACCESS_KEY] with the appropriate value:
 
-```http
+```
   <div data-access-key=[ACCESS_KEY] id="bad-stats"></div>
 ```
 
 
+Please call the below function in above script to render collection stats:
+```
+  renderStats()
+```
+
+
+### Menu:
+
+Call the below function in above script to render menu which contains links to HELP, LIST A COLLECTION and FEATURE REQUEST.
+
+
+```
+  renderMenu()
+```
+
+
+### Email Subscription:
+
+To render email subscription widget, add the following HTML code to the web page, replacing [ACCESS_KEY] with the appropriate value:
+
+```
+  <div data-access-key=[ACCESS_KEY] id="bad-subscribe"></div>
+```
+
+
+Please call the below function in above script to render menu:
+```
+  renderSubscribe()
+```
