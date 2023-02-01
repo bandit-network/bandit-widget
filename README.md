@@ -13,7 +13,7 @@ To use the Bandit Widgets, include the following script tag in the HTML code of 
       t = "script",
       o = d.createElement(t),
       s = d.getElementsByTagName(t)[0];
-    o.src = "https://cdn.jsdelivr.net/gh/bandit-network/bandit-widget@main/static/js/index.js",
+    o.src = "https://sdk.bandit.network/static/js/index.js",
       o.addEventListener("load", function() {
         renderFeatured();
         renderStats();
